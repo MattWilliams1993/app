@@ -1,0 +1,58 @@
+<div class="container" ng-controller="SignUpCtrl">
+
+	<div class="jumbotron col-md-2 col-md-offset-5" style="width:70%; margin-left:15%;">
+		<center>
+		<h2>Sign Up</h2>
+		</br>
+		<div class="container" style="width: 70%;">
+
+		<form>
+		<input class="form-control floating-label" placeholder="Username" type="textbox" ng-model="user.username">
+		</br>
+		</br>
+		<input class="form-control floating-label" placeholder="First Name" type="textbox" ng-model="user.firstname">
+		</br>
+		</br>
+		<input class="form-control floating-label" placeholder="Last Name" type="text" ng-model="user.lastname">
+		</br>
+		</br>
+		<input class="form-control floating-label" placeholder="Email" type="email" ng-model="user.email">
+		</br>
+		</br>
+		<input class="form-control floating-label" placeholder="Re-enter email" type="email" ng-model="user.reemail">
+		</br>
+		</br>
+		<input class="form-control floating-label" placeholder="New password" type="password" ng-model="user.password">
+		</br>
+		</br>
+		<div class="radio radio-primary">
+    	<label>
+        	<input type="radio" ng-model="user.male" value="male" name="sex">
+        		Male
+    		</label>
+    		<label>
+        	<input type="radio" ng-model="user.female" value="female" name="sex">
+        		Female
+    		</label>
+		</div>
+		</br>
+		</br>
+		<input class="form-control floating-label" placeholder="Prefered Programming Language?" type="text" ng-model="user.pref_language">
+		</br>
+		</br>
+		<button class="btn btn-primary" ng-click="signUpUser()">Sign Up</button>
+		</div>
+		</form>
+	</div>
+	</center>
+
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        $.material.init();
+        $.material.input();
+        $.material.checkbox();
+    });
+</script>

@@ -1,0 +1,27 @@
+<div class="container animated bounceInLeft" ng-class="{'bounceOutRight': clicked}">
+
+	<div class="jumbotron col-md-4 col-md-offset-3" style="width: 500px">
+		
+			<p>Lets Get You Set Up Real Quick..</p>
+			<h3>What Are You Interested In?</h3>
+			
+            <div class="col-md-12" style="padding-left: 0px;">
+	            <tags-input ng-model="tags" on-tag-added="addTag($tag)" placeholder="Enter Some Interests..." style="">
+	            	<auto-complete source="loadItems($query)" min-length="1"></auto-complete>
+	            </tags-input>
+	            </br>
+	         </div>
+            
+            <div class="row">
+            	<div class="col-md-4">
+                	<button class="btn btn-primary" style="margin-top: 4px;" ng-click="completeStep2()">Continue</button>
+                </div>
+                <div class="col-md-8">
+                	<img src="img/step2.gif" width="300px" style="border-style: solid; border-width: 5px;" />
+                </div>
+            </div> 
+    		
+    </div>
+
+</div>
+

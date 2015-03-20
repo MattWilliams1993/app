@@ -1,0 +1,62 @@
+<div class="container">
+
+
+<div class="jumbotron col-md-2" style="margin-top: 30px;">
+	<div class="col-md-6" style="padding-left:0px;">
+		<img ng-src=" {{ photo }}" width="75px"/>
+	</div>
+  	<div class="col-md-6" style="padding-right: 0px;">
+  		<small>{{ firstname }} {{lastname}}</small>
+  	</div>
+  
+</div>
+
+<div class="jumbotron col-md-6" style="margin-top: 30px; margin-left: 30px;">
+
+	<div class="panel">
+
+		<div class="panel-body" style="padding: 3px;">
+		<textarea placeholder="Whats On Your Mind?" style="width: 100%; resize:none;" ng-model="bodyContent"></textarea>
+			<tags-input ng-model="tags" on-tag-added="addTag($tag)" placeholder="Enter Some Interests..." style="">
+	           	<auto-complete source="loadItems($query)" min-length="1"></auto-complete>
+	        </tags-input>
+		</div>
+		<div class="panel-footer clearfix">
+		 	<button class="btn-sm btn-primary pull-right" style="margin: 0px;" ng-click="postStatus()">Post</button>
+		</div>
+	</div>
+
+<div class="panel" ng-repeat="post in posts | orderBy: '-likes'">
+	<div class="panel-heading">
+		<img ng-src=" {{ post.photo }}" width="30px"/>
+  		<small><a ng-href="/{{post.username}}">{{ post.firstname }} {{ post.lastname }}</a></small>
+  		<small>{{post.date}}</small>
+  	</div>
+  	<div class="panel-body">
+
+  		<h3>{{post.body}}</h3>
+
+  	</div>
+  	<div class="panel-footer">	
+  		 <ul>
+  		 	<li ng-repeat="tag in post.tags">{{tag.name}}</li>
+  		 </ul>
+  		 <button class="btn btn-primary btn-small" ng-click="addLikeToPost(post.id)"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+  		 <button class="btn btn-primary btn-small" ng-click="addDislikeToPost(post.id)"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></button>
+  		 <div class="pull-right clearfix" ng-model="likes">{{post.likes}}</div>
+  	</div>
+  	
+</div>
+
+</div>
+
+
+
+
+<div class="jumbotron col-md-3" style="margin-top: 30px; margin-left: 30px;">
+	<small>Your Current Interests</small>
+	<ul>
+		<li ng-repeat="interest in interests"> {{ interest.name }}</li>
+	</ul>
+</div>
+</div>

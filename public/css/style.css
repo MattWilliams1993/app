@@ -1,0 +1,31 @@
+.fullbg {
+	background-image: url("http://files.tested.com/photos/2013/06/25/49275-img_9661.jpg");
+	height: 100%;
+	color: #ffffff;
+	margin-top: -20px;
+}
+
+.fulltext {
+	text-align: left;
+	margin-top: 50px;
+	font-size: 20px;	
+}
+
+.nopadding {
+
+	padding: 0px, 0px, 0px, 0px;
+	margin: 0px, 0px, 0px, 0px;
+
+}
+
+.loginBox {
+
+	color: #000000;
+	text-align: center;
+
+}
+
+.wide {
+	width: 97%;
+}
+
