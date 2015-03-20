@@ -5,9 +5,9 @@
     		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/css/ripples.min.css" rel="stylesheet">
     		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.2.2/css/material-wfont.min.css" rel="stylesheet">
     		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material.min.css">
-    		<link rel="stylesheet" type="text/css" href="http://localhost/css/style.css">
-    		<link rel="stylesheet" type="text/css" href="http://localhost/css/ng-tags-input.css">
-    		<link rel="stylesheet" type="text/css" href="http://localhost/css/animate.css">
+    		<link rel="stylesheet" type="text/css" href="/css/style.css">
+    		<link rel="stylesheet" type="text/css" href="/css/ng-tags-input.css">
+    		<link rel="stylesheet" type="text/css" href="/css/animate.css">
     		<base href="/"/>
         @if(Auth::check())
     		<title>Trendoo</title>
