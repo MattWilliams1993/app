@@ -51,6 +51,19 @@ app.controller('MainCtrl', ['$scope', '$http', '$facebook', function($scope, $ht
 		})
 	}
 
+	$scope.signUpUser = function() {
+
+	//Form validation goes here shit head
+
+		$http.post('api/user/signup', {username: $scope.user.username, firstname: $scope.user.firstname, lastname: $scope.user.lastname, email: $scope.user.email, password: $scope.user.password, pref_language: $scope.user.pref_language}).success(function(data){
+
+			window.location.href = "user/login";
+
+		});
+
+
+	};
+
 
 	$scope.logout = function() {
 
